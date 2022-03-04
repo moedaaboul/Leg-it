@@ -1,70 +1,80 @@
-<nav class='navbar is-white' role='navigation' aria-label='main navigation is-black'>
-
+<nav
+  class='navbar is-white'
+  role='navigation'
+  aria-label='main navigation is-black'
+>
 
   <div id='navbarBasicExample' class='navbar'>
     <div class='navbar-start'>
       <div class='navbar-item'>
-          <a class='button NavButton' href='/'>
-           <span class="icon">
-            <i class="fa fa-home"></i>
+        <a class='button NavButton' href='/'>
+          <span class='icon'>
+            <i class='fa fa-home'></i>
           </span>
-          </a>
-          <a class='button NavButton   ' href='/favourites'>
-            <i class='fas fa-heart'></i>
-          </a>
-          {{#if signedIn}}
-          <a class='button NavButton  
-          create-post modal-trigger upload'>
-           <span class="icon">
-            <i class="fa fa-plus"></i>
-          </span>
-          </a>
-          <div class="dropdown">
-  <div class="dropdown-trigger">
-    <button class="button  NavButton " aria-haspopup="true" aria-controls="dropdown-menu">
-      <span class="icon is-small">
-        <i class="fas fa-user" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-    <div class="dropdown-content">
-      <a href="/profile" class="dropdown-item">
-        Profile
-      </a>
-      <hr class="dropdown-divider">
-      <a href="/api/manage/" class="dropdown-item">
-        Manage Posts
-      </a>
-      <hr class="dropdown-divider">
-      <a id="logout-btn" class="dropdown-item">
-       logout
-      </a>
-    </div>
-  </div>
-</div>
-<script type="module" src='/js/toggleProfile.js'></script>
-          {{else}}
-          <a id='login-btn' class='button NavButton ' href='/login'>
-           <span class="icon">
-              <i class="fas fa-sign-in-alt"></i>
+        </a>
+        <a class='button NavButton' href='/favourites'>
+          <i class='fas fa-heart'></i>
+        </a>
+        {{#if signedIn}}
+          <a class='button NavButton create-post modal-trigger upload'>
+            <span class='icon'>
+              <i class='fa fa-plus'></i>
             </span>
           </a>
-          <a class='button NavButton ' href='/register'>
-            <span class="icon">
-              <i class="fas fa-user-plus"></i>
+          <div class='dropdown'>
+            <div class='dropdown-trigger'>
+              <button
+                class='button NavButton'
+                aria-haspopup='true'
+                aria-controls='dropdown-menu'
+              >
+                <span class='icon is-small'>
+                  <i class='fas fa-user' aria-hidden='true'></i>
+                </span>
+              </button>
+            </div>
+            <div class='dropdown-menu' id='dropdown-menu' role='menu'>
+              <div class='dropdown-content'>
+                <a href='/profile' class='dropdown-item'>
+                  Profile
+                </a>
+                <hr class='dropdown-divider' />
+                <a href='/api/manage/' class='dropdown-item'>
+                  Manage Posts
+                </a>
+                <hr class='dropdown-divider' />
+                <a id='logout-btn' class='dropdown-item'>
+                  Logout
+                </a>
+              </div>
+            </div>
+          </div>
+          <script type='module' src='/js/toggleProfile.js'></script>
+        {{else}}
+          <a id='login-btn' class='button NavButton' href='/login'>
+            <span class='icon'>
+              <i class='fas fa-sign-in-alt'></i>
             </span>
           </a>
-          {{/if}}
-          <a class='button NavButton ' href='/feed'>
-           <span class="icon">
-            <i class="fa fa-book"></i>
-          </span>
+          <a class='button NavButton' href='/register'>
+            <span class='icon'>
+              <i class='fas fa-user-plus'></i>
+            </span>
           </a>
+        {{/if}}
+        <a class='button NavButton' href='/feed'>
+          <span class='icon'>
+            <i class='fa fa-book'></i>
+          </span>
+        </a>
       </div>
     </div>
-    <div class="is-flex is-align-items-center mr-6  ">
-      <img class="logoNav" src="https://i.gyazo.com/d7ef96b67160d310bbdacb6333ba54f3.png" style="max-height: 60px;">
+    <div class='is-flex is-align-items-center mr-6'>
+      <img
+        class='logoNav'
+        src='https://i.gyazo.com/d7ef96b67160d310bbdacb6333ba54f3.png'
+        style='max-height: 60px;'
+      />
     </div>
   </div>
 </nav>

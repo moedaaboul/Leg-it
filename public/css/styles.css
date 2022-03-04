@@ -277,6 +277,14 @@ a {
   margin-right: 0.75rem;
 }
 
+.post-avatar {
+  display: block;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+}
+
 img {
   max-height: 730px;
 }
@@ -328,7 +336,12 @@ img {
   outline: red 2px solid;
 }
 
-
-.userStatsContainer{
+.userStatsContainer {
   width: 72%;
+}
+
+@media screen and (max-width: 768px) {
+  .level-left + .level-right {
+    margin-top: 0rem;
+  }
 }

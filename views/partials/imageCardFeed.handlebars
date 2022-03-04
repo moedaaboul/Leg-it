@@ -1,6 +1,7 @@
 <article class='card' id='{{id}}'>
-  <div class='is-flex is-justify-content-space-between'>
+  <div class='is-flex is-align-items-center is-justify-content-space-between'>
     <div class='level-left'>
+      <img class="post-avatar ml-2 is-hidden-mobile" src="{{user.image}}">
       <h2 class='card-header-title username level-left' user-id='{{user.id}}'>
         <a href='/community/{{user.id}}'>{{user.username}}</a>
         {{#if follower}}

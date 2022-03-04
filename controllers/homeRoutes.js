@@ -129,6 +129,27 @@ router.get('/feed', async (req, res) => {
       ],
       order: [['updatedAt', 'DESC']],
     });
+    const dbfollowersData = await Follower.findAll({
+      raw: true,
+      where: {
+        user_id: req.session.user.id,
+      },
+    });
+
+    const following = dbfollowersData.map((e) => e.follower_id);
+    const usersData = await User.findAll({
+      raw: true,
+      attributes: {
+        exclude: ['password', 'email'],
+      },
+    });
+    const suggestedUsers = usersData.filter((e) => !following.includes(e.id));
+    console.log(following);
+    console.log(usersData);
+    console.log(suggestedUsers, 'suggestedUsers');
+    // const followersData = dbfollowersData.get({ plain: true });
+    // console.log(followersData);
+    // console.log(followersData.dataValues, 'followerData');
     let postsData = dbpostsData.map((el) => el.get({ plain: true }));
     postsData.map(
       (e) =>
@@ -142,10 +163,13 @@ router.get('/feed', async (req, res) => {
             .length > 0)
     );
     postsData = postsData.filter((e) => e.follower === true);
-    // console.log(postsData);
+    console.log(postsData);
+    // console.log(followersData, 'followersData');
+    // console.log(followersData.followers, 'followersData');
     res.render('feed', {
       title: 'Lego Posts',
       postsData: postsData,
+      suggestedUsers: suggestedUsers,
       signedIn: req.session.loggedIn,
       loggedOut: !req.session.loggedIn,
       user: req.session.user.username,
@@ -191,6 +215,21 @@ router.get('/favourites', async (req, res) => {
       ],
       order: [['updatedAt', 'DESC']],
     });
+    const dbfollowersData = await Follower.findAll({
+      raw: true,
+      where: {
+        user_id: req.session.user.id,
+      },
+    });
+
+    const following = dbfollowersData.map((e) => e.follower_id);
+    const usersData = await User.findAll({
+      raw: true,
+      attributes: {
+        exclude: ['password', 'email'],
+      },
+    });
+    const suggestedUsers = usersData.filter((e) => !following.includes(e.id));
     const postsData = dbpostsData.map((el) => el.get({ plain: true }));
     postsData.map(
       (e) =>
@@ -211,6 +250,7 @@ router.get('/favourites', async (req, res) => {
       signedIn: req.session.loggedIn,
       loggedOut: !req.session.loggedIn,
       user: req.session.user.username,
+      suggestedUsers: suggestedUsers,
     });
   } catch (error) {
     res.status(500).json({ msg: error });
@@ -271,7 +311,7 @@ router.get('/community/:id', async (req, res) => {
 
     let follower = false;
     followerArr.forEach((followData) => {
-      if (followData.user_id == userData.id) {
+      if (followData.user_id === req.session.user.id) {
         follower = true;
       }
     });

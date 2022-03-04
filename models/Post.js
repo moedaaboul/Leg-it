@@ -19,14 +19,6 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    post_video: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    post_likes: {
-      type: DataTypes.INTEGER,
-      defaultValue: null,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

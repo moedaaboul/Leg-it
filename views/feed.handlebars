@@ -1,10 +1,26 @@
 {{> navbar}}
 <div class="navHolderFeed"> </div>
 {{> uploadModal}}
+<div class="columns is-gapless">
+<div class="column is-9">
 <div class="container ">
 {{#each postsData}}
 {{> imageCardFeed}}
 {{/each}}  
+</div>
+</div>
+<div class="column is-3">
+<div class="container is-centered mt-5 ml-1">
+            {{#if suggestedUsers}}
+    <div class="has-text-primary is-size-6">Suggestions for you:</div>  
+{{else}}
+<strong class="has-text-primary is-size-6 mr-3">⚡ You are up to date.</strong>
+        {{/if}}
+{{#limitEach suggestedUsers 5}}
+{{> suggestionsCard}}
+{{/limitEach}}
+</div>
+</div>
 </div>
 {{> modal}}
 

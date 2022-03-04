@@ -13,9 +13,9 @@
           <br>
 
         {{#if follower}}
-          <button class='button is-info is-light username-within' user-id='{{userId}}'>Following</button>
+          <button class='button userfollow-btn is-info is-light username-within' user-id='{{userId}}'>Following</button>
         {{else}}
-          <button class='button is-primary username-within' user-id='{{userId}}'>+ <span
+          <button class='button userfollow-btn is-primary username-within' user-id='{{userId}}'>+ <span
               class='ml-1 has-text-link is-clickable'>
             Follow
             </button>
@@ -47,7 +47,7 @@
       <div class="level-item has-text-centered">
         <div>
           <p class="heading">FOLLOWED BY</p>
-          <p class="title">{{followerAmount}}</p>
+          <p class="title followers">{{followerAmount}}</p>
         </div>
       </div>
       
@@ -65,4 +65,4 @@
     </div>
 </section>
 
-<script type='module' src='/js/followAll.js'></script>
+<script type='module' src='/js/followUser.js'></script>
