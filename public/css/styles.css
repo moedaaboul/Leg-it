@@ -345,3 +345,35 @@ img {
     margin-top: 0rem;
   }
 }
+
+#footerWrapper {
+  margin-top: 5%;
+}
+#footer {
+  margin-top: 5%;
+  height: 30%;
+  padding-top: 2%;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    height: 55%;
+  }
+}
+
+#inp-profile > * {
+  border: 0;
+}
+
+#uploadInput {
+  background-color: lightgray;
+}
+
+#uploadWrapper {
+  height: 50%;
+}
+
+#normalTag > * {
+  color: hsl(171, 100%, 41%);
+}

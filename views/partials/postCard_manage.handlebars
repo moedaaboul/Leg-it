@@ -8,16 +8,14 @@
   <div class='card-content'>
     <div class='media'>
       <div class='media-left'>
-        <figure class='image is-48x48'>
+        <figure class='image is-rounded is-48x48'>
           <img
-            src='https://static.turbosquid.com/Preview/2019/07/24__16_40_34/001.pngCC3F8D22-8EB0-4C2D-8B34-5F386F68ABC5Large.jpg'
-            alt='{{userName}}'
+            src='{{user.image}}'
+            alt='{{user.username}}'
           />
         </figure>
       </div>
       <div id='personalPostSmall' class='media-content'>
-        <p class='content highlight is-small'>{{post_likes}} users liked this</p>
-        <p class='content is-small'> {{post_title}}</p>
         <p class='content is-small'> Last update: {{post_time updatedAt}}</p>
       </div>
     </div>
