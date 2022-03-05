@@ -17,7 +17,7 @@ const ONE_MINUTE = 1000 * 60;
 const ONE_HOUR = 1000 * 60 * 60;
 
 const sessionOptions = {
-  secret: 'secret',
+  secret: 'new secret',
   resave: false,
   saveUninitialized: false,
   cookies: {
