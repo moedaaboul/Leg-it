@@ -2,17 +2,18 @@ const { cloudinary } = require('../../utils/cloudinary');
 const router = require('express').Router();
 const User = require('../../models/User');
 const bcrypt = require('bcrypt');
+const { urlCompiler } = require('../../utils/helpers');
 
 router.put('/upload', async (req, res) => {
   try {
-    console.log(req.body);
-    const fileStr = req.body.data;
+    let fileStr = req.body.data;
     const uploadResponse = await cloudinary.uploader.upload(fileStr);
-    console.log(uploadResponse);
+
+    const thisImageURL = urlCompiler(uploadResponse.url, 'w_500,h_500,c_fill');
 
     const updatedProfile = await User.update(
       {
-        image: uploadResponse.url,
+        image: thisImageURL,
       },
       {
         where: {

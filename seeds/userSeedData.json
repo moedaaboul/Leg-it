@@ -1,32 +1,38 @@
 [
-    {
-        "username": "LegoSpaceMan",
-        "email": "user1@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    },
-    {
-        "username": "BigFred33",
-        "email": "user2@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    },
-    {
-        "username": "IluvLego",
-        "email": "user3@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    },
-    {
-        "username": "ThanosWasRight",
-        "email": "user4@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    },
-    {
-        "username": "BatmanFan22",
-        "email": "user5@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    },
-    {
-        "username": "LegoSkywalker",
-        "email": "user6@gmail.com",
-        "password": "Pzcw6x9@x@ErS8P"
-    }
+  {
+    "username": "LegoSpaceMan",
+    "email": "user1@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://www.postplanner.com/hs-fs/hub/513577/file-2886416984-png/blog-files/facebook-profile-pic-vs-cover-photo-sq.png?width=250&height=250&name=facebook-profile-pic-vs-cover-photo-sq.png"
+  },
+  {
+    "username": "BigFred33",
+    "email": "user2@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/0/d/f/0df1044482392cc4329521ab5945b3e837b11c55.png"
+  },
+  {
+    "username": "IluvLego",
+    "email": "user3@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://pbs.twimg.com/profile_images/1484523928152387597/WfOJcHA3_400x400.png"
+  },
+  {
+    "username": "ThanosWasRight",
+    "email": "user4@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg"
+  },
+  {
+    "username": "BatmanFan22",
+    "email": "user5@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://images.unsplash.com/photo-1520635360276-79f3dbd809f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80"
+  },
+  {
+    "username": "LegoSkywalker",
+    "email": "user6@gmail.com",
+    "password": "Pzcw6x9@x@ErS8P",
+    "image": "https://www.goodmorninghdloveimages.com/wp-content/uploads/2020/04/Whatsapp-Profile-Photo-Images-9.jpg"
+  }
 ]

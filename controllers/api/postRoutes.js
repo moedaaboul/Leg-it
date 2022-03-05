@@ -1,6 +1,7 @@
 const { cloudinary } = require('../../utils/cloudinary');
 const router = require('express').Router();
 const { Post } = require('../../models');
+const { urlCompiler } = require('../../utils/helpers');
 
 router.post('/upload', async (req, res) => {
   try {
@@ -8,6 +9,8 @@ router.post('/upload', async (req, res) => {
     const fileStr = req.body.data;
     const uploadResponse = await cloudinary.uploader.upload(fileStr);
     console.log(uploadResponse);
+    uploadResponse.url = urlCompiler(uploadResponse.url, 'w_1169,h_780,c_fill');
+
     console.log(
       {
         post_title: 'cloudinary upload',

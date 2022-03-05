@@ -343,12 +343,10 @@ router.get('/profile', async (req, res) => {
   }
   try {
     const findUser = await User.findByPk(req.session.user.id, {
-      attributes: { exclude: ['password'] },
+      attributes: { exclude: ['password', 'email'] },
     });
-
-    userData = findUser.get({ plain: true });
-    console.log(userData);
-    res.render('profile', { userData });
+    const singleUser = findUser.get({ plain: true });
+    res.render('profile', { singleUser });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
