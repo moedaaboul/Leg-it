@@ -21,7 +21,7 @@ const handleSubmitFile = (e) => {
   reader.onloadend = async () => {
     await uploadImage(reader.result);
     document.querySelector('.btn-profile').classList.remove('is-loading');
-    document.location.replace('/');
+    window.location.reload();
   };
   reader.onerror = () => {
     console.error('AHHHHHHHH!!');

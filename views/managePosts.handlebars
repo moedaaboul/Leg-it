@@ -11,10 +11,13 @@
   </div>
 </section>
 
-<section class=" is-flex is-flex-wrap-wrap is-justify-content-flex-start is-flex-grow-1 is-flex-shrink-0">
-  {{#each postArr}}
-  {{> postCard_manage}}
-  {{/each}}  
-</section>
+<div class="is-centered">
+  <section class=" is-flex is-flex-wrap-wrap is-justify-content-space-between is-flex-grow-1 is-flex-shrink-0">
+    {{#each postArr}}
+    {{> postCard_manage}}
+    {{/each}}  
+  </section>
+</div>
+
 
 <script type='module' src="/js/manageHelper.js"></script>

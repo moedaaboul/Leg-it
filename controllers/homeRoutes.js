@@ -338,8 +338,17 @@ router.get('/community/:id', async (req, res) => {
 });
 
 router.get('/profile', async (req, res) => {
+  if (!req.session.loggedIn) {
+    return res.redirect('/login');
+  }
   try {
-    res.render('profile');
+    const findUser = await User.findByPk(req.session.user.id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    userData = findUser.get({ plain: true });
+    console.log(userData);
+    res.render('profile', { userData });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
