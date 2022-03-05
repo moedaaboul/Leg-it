@@ -2,7 +2,6 @@ import { makeRequest } from './helpers.js';
 
 const followBtn = document.querySelector('.follow-action');
 const followText = document.querySelector('.username-within');
-console.log(followBtn);
 const handleFollowAction = async (event) => {
   event.preventDefault();
   const id = document.querySelector('.username').getAttribute('user-id');

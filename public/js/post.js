@@ -1,7 +1,4 @@
-// import { makeRequest } from './helpers.js';
-
 const postBtn = document.querySelector('.btn-post');
-// const input = document.querySelector('input[type=file]');
 
 function readFile() {
   if (this.files && this.files[0]) {

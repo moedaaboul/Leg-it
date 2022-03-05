@@ -4,22 +4,18 @@
 {{#ifEquals ../user_id user_id }}
 <div class=' is-flex is-align-items-center '
   style="max-height: 100px">
-  {{!-- max height will break if comment is too big --}}
-        
+  {{!-- max height will break if comment is too big --}}     
         <p>
           <span
             class='has-text-primary is-size-9 is-uppercase has-text-weight-bold'
           >
           {{user.username}}: </span>
           {{this.comment_text}}
-          </p> 
-            
+          </p>         
   </div>
-
 {{/ifEquals}}
 {{/limitEach}}
 </div>
-
 <div class="is-flex  is-align-items-center">
     {{#if comments}}
     <div>

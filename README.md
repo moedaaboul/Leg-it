@@ -71,11 +71,14 @@ the sense of community on the app.
 
 ### User Story (TBD)
 
-- I can send and delete (my) posts
+- I can create (upload) new posts and delete (my) posts
 - I can comment on other posts and delete my own comments.
 - I can follow and unfollow other users.
 - I can like and unlike other users.
+- I can view posts by tag on click.
 - I can add and edit tags to my posts
+- I can browse lego creator profiles.
+- Whem I browse Lego creator profiles, I can see activity stats and posted images.
 
 ### Built With
 
@@ -83,7 +86,6 @@ the sense of community on the app.
 - [Handlebars](https://handlebarsjs.com/)
 - [Express](https://expressjs.com/)
 - [Cloudinary](https://cloudinary.com/)
-- [multer](https://www.npmjs.com/package/multer)
 - [MySQL](https://www.mysql.com/)
 - [Heroku](https://www.heroku.com/)
 
@@ -147,7 +149,7 @@ create a pull request. You can also simply open an issue with the tag
 
 ## Hosting
 
-| Project  | Note-Taker URL                    |
+| Project  | Legogram URL                    |
 | -------- | --------------------------------- |
 | Legogram | <https://legogram.herokuapp.com/> |
 
@@ -189,12 +191,6 @@ Project Link:
 
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit
-to. I've included a few of my favorites to kick things off!
-
-- [Choose an Open Source License](https://choosealicense.com)
-- [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 - [Express](https://expressjs.com)
 - [MySQL](https://www.mysql.com)
@@ -203,8 +199,11 @@ to. I've included a few of my favorites to kick things off!
 - [Bulma](https://bulma.io)
 - [Cloudinary](https://cloudinary.com)
 - [imgur](https://imgur.comm)
-- [multer](https://www.npmjs.com/package/multer)
 - [Heroku](https://id.heroku.com/login)
+
+## Credits 
+- [Julien Barreira](https://codepen.io/JulienBarreira/pen/NvKbwq)
+- [Kaitlyn Stahl](https://codepen.io/kaista/pen/GPzWbo)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -225,7 +224,7 @@ to. I've included a few of my favorites to kick things off!
 [license-url]: https://github.com/heranYang93/Leg-it/blob/master/LICENSE.txt
 [linkedin-shield]:
   https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url-md]: https://linkedin.com/in/m-d-027032228/
+[linkedin-url-md]: https://www.linkedin.com/in/muhammad-daaboul-38470046/
 [github-follow-shield-md]:
   https://img.shields.io/github/followers/heranYang93?style=social
 [linkedin-url-hy]: https://linkedin.com/in/heranyang/

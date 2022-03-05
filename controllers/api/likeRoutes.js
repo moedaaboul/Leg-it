@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Like, Post } = require('../../models');
+const { Like } = require('../../models');
 
 router.post('/:postId', async (req, res) => {
   try {

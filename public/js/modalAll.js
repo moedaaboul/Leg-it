@@ -8,8 +8,6 @@ const gotoPost = document.querySelector('.goto-post');
 
 // This adds an event listener on h3 headers to fetch repo data
 
-console.log(modalTriggers);
-
 document.addEventListener('DOMContentLoaded', function () {
   // querySelector - it returns the element within the document that matches the specified selector
   Array.from(modalTriggers).forEach(function (element) {
@@ -21,12 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
           element.parentElement.parentElement.parentElement.parentElement.id;
         gotoPost.classList.remove('is-hidden');
         gotoPost.href = `/posts/${postId}`;
-        console.log(postId, 'post-id');
-        console.log(id, 'user-id');
         const getData = await getRequest(`/api/follow/${id}`);
         const getUser = await getRequest(`/api/users/user`);
-        console.log(id, getUser.user, 'id');
-        console.log(+id === +getUser.user);
         if (getData.follow) {
           followBtn.innerHTML = '';
           followBtn.innerHTML = 'Unfollow';
@@ -53,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
           event.preventDefault();
           try {
             const postData = await makeRequest(`/api/follow/${id}`, 'POST');
-            console.log(postData);
             window.location.reload();
           } catch (error) {
             console.log('Failed to login', error);

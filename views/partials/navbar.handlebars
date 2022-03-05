@@ -12,13 +12,18 @@
             <i class='fa fa-home'></i>
           </span>
         </a>
-        <a class='button NavButton' href='/favourites'>
-          <i class='fas fa-heart'></i>
-        </a>
         {{#if signedIn}}
+          <a class='button NavButton' href='/favourites'>
+            <i class='fas fa-heart'></i>
+          </a>
           <a class='button NavButton create-post modal-trigger upload'>
             <span class='icon'>
               <i class='fa fa-plus'></i>
+            </span>
+          </a>
+          <a class='button NavButton' href='/feed'>
+            <span class='icon'>
+              <i class='fa fa-book'></i>
             </span>
           </a>
           <div class='dropdown'>
@@ -62,11 +67,6 @@
             </span>
           </a>
         {{/if}}
-        <a class='button NavButton' href='/feed'>
-          <span class='icon'>
-            <i class='fa fa-book'></i>
-          </span>
-        </a>
       </div>
     </div>
     <div class='is-flex is-align-items-center mr-6'>

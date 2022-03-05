@@ -5,9 +5,7 @@ router.post('/:followerId', async (req, res) => {
   try {
     console.log(req.session);
     const { followerId } = req.params;
-    // console.log(followerId, 'followerId');
     const userId = req.session.user.id;
-    // console.log(userId, 'userId');
     const result = await Follower.findOne({
       where: { user_id: userId, follower_id: followerId },
     });
