@@ -325,8 +325,8 @@ img {
 }
 
 #legoSurprisedFace {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 12%;
+  margin-bottom: 12%;
   width: 20%;
 }
 
@@ -376,4 +376,9 @@ img {
 
 #normalTag > * {
   color: hsl(171, 100%, 41%);
+}
+
+#voidHolder {
+  background-color: rgba(250, 250, 250);
+  height: 80vh;
 }

@@ -26,7 +26,7 @@
       <link rel='stylesheet' href='/css/single-post.css' />
     {{/if}}
   </head>
-  <body class="">
+  <body class=''>
     {{{body}}}
     <script
       src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
@@ -36,6 +36,37 @@
     ></script>
     <script src='/js/auth.js'></script>
 
-    
   </body>
+  <footer class='footer py-4 has-background-light is-flex center-column'>
+    <div class='container is-flex center-column'>
+      <section class='columns'>
+        {{!-- <section class='column is-6 is-desktop'></section> --}}
+        <section class='column is-4 is-desktop'>
+          <h5 class='Subtitle is-6 has-text-centered has-text-weight-medium'>Documentation</h5>
+          <ul class='has-text-centered'>
+            <li>
+              <a href='https://github.com/heranYang93/Leg-it' target='_blank'>
+                <i class='fab fa-github mr-1'></i>
+                View Source
+              </a>
+            </li>
+            <li>
+              <p class='Subtitle is-7'>© 2021 All Rights Reserved</p>
+            </li>
+
+          </ul>
+        </section>
+        <section class='column is-8 is-desktop'>
+          <h5 class='Subtitle is-6 has-text-centered has-text-weight-medium'>Legogram</h5>
+          <p class='Subtitle is-7 has-text-centered'>
+            Legogram is the perfect platform for users to come together and
+            share their passion for the Lego empire. A lot of functionality
+            around providing features to promote collaboration and communication
+            have been purposely implemented to boost the sense of community on
+            the app.
+          </p>
+        </section>
+      {{!-- </section class='column is-one-fifth is-desktop'></section> --}}
+    </div>
+  </footer>
 </html>

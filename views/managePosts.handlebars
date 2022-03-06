@@ -12,12 +12,15 @@
 </section>
 
 <div class="is-centered">
-  <section class=" is-flex is-flex-wrap-wrap is-justify-content-space-between is-flex-grow-1 is-flex-shrink-0">
+  <section id='keyInfoArea' class="is-flex is-flex-wrap-wrap is-justify-content-space-between is-flex-grow-1 is-flex-shrink-0">
     {{#each postArr}}
     {{> postCard_manage}}
     {{/each}}  
   </section>
 </div>
-{{> footer}}
 
+{{> uploadModal}}
+
+<script type="module" src='/js/checkDefault.js'></script>
 <script type='module' src="/js/manageHelper.js"></script>
+<script type='module' src='/js/uploadModal.js'></script>

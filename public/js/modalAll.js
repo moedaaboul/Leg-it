@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
               `/api/posts/${postId}`,
               'DELETE'
             );
-            console.log(postData);
             window.location.reload();
           } catch (error) {
             console.log('Failed to login', error);

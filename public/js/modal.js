@@ -19,7 +19,6 @@ modalTrigger.addEventListener('click', async function () {
       event.preventDefault();
       try {
         const postData = await makeRequest(`/api/posts/${postId}`, 'DELETE');
-        console.log(postData);
         window.location.replace('/');
       } catch (error) {
         console.log('Failed to login', error);

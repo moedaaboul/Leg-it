@@ -9,7 +9,6 @@ const handleFollowAction = async (event) => {
   if (id) {
     try {
       const data = await makeRequest(`/api/follow/${id}`, 'POST');
-      console.log(data);
       if (data.follow) {
         followBtn.innerHTML = '';
         followBtn.innerHTML = 'Unfollow';

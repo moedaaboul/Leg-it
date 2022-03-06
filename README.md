@@ -69,7 +69,7 @@ the sense of community on the app.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### User Story (TBD)
+### User Story
 
 - I can create (upload) new posts and delete (my) posts
 - I can comment on other posts and delete my own comments.
@@ -78,7 +78,8 @@ the sense of community on the app.
 - I can view posts by tag on click.
 - I can add and edit tags to my posts
 - I can browse lego creator profiles.
-- Whem I browse Lego creator profiles, I can see activity stats and posted images.
+- Whem I browse Lego creator profiles, I can see activity stats and posted
+  images.
 
 ### Built With
 
@@ -149,7 +150,7 @@ create a pull request. You can also simply open an issue with the tag
 
 ## Hosting
 
-| Project  | Legogram URL                    |
+| Project  | Legogram URL                      |
 | -------- | --------------------------------- |
 | Legogram | <https://legogram.herokuapp.com/> |
 
@@ -200,10 +201,6 @@ Project Link:
 - [Cloudinary](https://cloudinary.com)
 - [imgur](https://imgur.comm)
 - [Heroku](https://id.heroku.com/login)
-
-## Credits 
-- [Julien Barreira](https://codepen.io/JulienBarreira/pen/NvKbwq)
-- [Kaitlyn Stahl](https://codepen.io/kaista/pen/GPzWbo)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

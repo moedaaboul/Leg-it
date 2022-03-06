@@ -335,7 +335,11 @@ router.get('/profile', async (req, res) => {
       attributes: { exclude: ['password', 'email'] },
     });
     const singleUser = findUser.get({ plain: true });
-    res.render('profile', { singleUser });
+    res.render('profile', {
+      singleUser,
+      signedIn: req.session.loggedIn,
+      loggedOut: !req.session.loggedIn,
+    });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
