@@ -1,7 +1,6 @@
 import { makeRequest } from './helpers.js';
 
 const likeBtn = document.querySelector('#like-post');
-console.log(likeBtn);
 const handleLikePost = async (event) => {
   event.preventDefault();
   const id = document.querySelector('.card').id;
@@ -9,11 +8,9 @@ const handleLikePost = async (event) => {
     try {
       const data = await makeRequest(`/api/like/${id}`, 'POST');
       const element = document.getElementById('like-post');
-      console.log(data);
       const likes = +document
         .querySelector('.likes-counter')
         .getAttribute('data-value');
-      console.log(likes, 'likes');
       if (data.like) {
         element.innerHTML = '';
         element.innerHTML = `<i class="fas fa-heart"></i><span class='likes-counter'

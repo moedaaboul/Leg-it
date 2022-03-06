@@ -52,7 +52,6 @@
             >DEL</button>
           {{/if}}
 
-          {{!-- <button class="update-post-btn button is-info is-light  is-small" comment-id={{id}}>EDIT</button> --}}
         </div>
 
       </div>
@@ -60,14 +59,12 @@
     {{/each}}
 
   </div>
-    {{!-- hy >>> --}}
-    <section class ='level-left m-1 is-hidden-mobile' id='tagArea'>
+    <section class ='level-left m-1' id='tagArea'>
         {{#each tags}}
         {{> singleTag}}
         {{/each}}  
     </section>
-{{!-- <<< hy --}}
-  <div class='level is-mobile m-1 is-hidden-mobile'>
+  <div class='level is-mobile m-1'>
 
     <div class='level-left'>
       <span

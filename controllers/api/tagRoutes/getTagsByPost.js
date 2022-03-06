@@ -17,9 +17,6 @@ router.get('/:id', async (req, res) => {
       return { id: singleTag.dataValues.id, title: singleTag.dataValues.title };
     });
 
-    console.log(`IN GET TAGS BY POST ROUTE`);
-    console.log(tagArr);
-
     res.status(200).render(pageToRender, { tagArr });
   } catch (err) {
     console.error(err.message);

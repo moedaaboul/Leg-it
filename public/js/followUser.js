@@ -4,7 +4,6 @@ const followUserBtn = document.querySelector('.userfollow-btn');
 
 followUserBtn.addEventListener('click', async (event) => {
   event.preventDefault();
-  //   console.log(element.innerHTML);
   const id = followUserBtn.getAttribute('user-id');
   const followedBy = document.querySelector('.followers');
   try {

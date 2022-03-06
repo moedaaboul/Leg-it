@@ -7,7 +7,6 @@ module.exports = {
       day: 'numeric',
       year: 'numeric',
     }).format(new Date(date));
-    // return date.toLocaleTimeString();
   },
 
   post_time: (date) => {
@@ -18,7 +17,6 @@ module.exports = {
       minute: 'numeric',
       hour: 'numeric',
     }).format(new Date(date));
-    // return date.toLocaleTimeString();
   },
 
   //function to filter comments for user only on the feed
@@ -34,11 +32,6 @@ module.exports = {
     return options.inverse(this);
   },
 
-  // a limited 'each' loop.
-  // usage: {{#limit items offset="1" limit="5"}} : items 1 thru 6
-  // usage: {{#limit items limit="10"}} : items 0 thru 9
-  // usage: {{#limit items offset="3"}} : items 3 thru context.length
-  // defaults are offset=0, limit=5
   limit: function (context, block) {
     var ret = '',
       offset = parseInt(block.hash.offset) || 0,

@@ -34,17 +34,14 @@ router.post('/login', async (req, res) => {
       raw: true,
       where: { username: req.body.name },
     });
-    console.log(user);
     if (!user) {
       res.status(404).json({ message: 'Login failed. Please try again!' });
       return;
     }
-    console.log(req.body.password);
     const validPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
-    console.log(validPassword);
     if (!validPassword) {
       res.status(400).json({ message: 'Login failed. Please try again!' });
       return;

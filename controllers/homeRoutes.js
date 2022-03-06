@@ -20,7 +20,6 @@ router.get('/', async (req, res) => {
       order: [['updatedAt', 'DESC']],
     });
     const postsData = dbpostsData.map((el) => el.get({ plain: true }));
-    // console.log(postsData);
     res.render('posts', {
       title: 'Lego Posts',
       postsData: postsData,
@@ -144,12 +143,6 @@ router.get('/feed', async (req, res) => {
       },
     });
     const suggestedUsers = usersData.filter((e) => !following.includes(e.id));
-    console.log(following);
-    console.log(usersData);
-    console.log(suggestedUsers, 'suggestedUsers');
-    // const followersData = dbfollowersData.get({ plain: true });
-    // console.log(followersData);
-    // console.log(followersData.dataValues, 'followerData');
     let postsData = dbpostsData.map((el) => el.get({ plain: true }));
     postsData.map(
       (e) =>
@@ -163,9 +156,6 @@ router.get('/feed', async (req, res) => {
             .length > 0)
     );
     postsData = postsData.filter((e) => e.follower === true);
-    console.log(postsData);
-    // console.log(followersData, 'followersData');
-    // console.log(followersData.followers, 'followersData');
     res.render('feed', {
       title: 'Lego Posts',
       postsData: postsData,
@@ -243,7 +233,6 @@ router.get('/favourites', async (req, res) => {
             .length > 0)
     );
     const filteredData = postsData.filter((e) => e.like === true);
-    // console.log(filteredData);
     res.render('feed', {
       title: 'Lego Posts',
       postsData: filteredData,
@@ -346,7 +335,11 @@ router.get('/profile', async (req, res) => {
       attributes: { exclude: ['password', 'email'] },
     });
     const singleUser = findUser.get({ plain: true });
-    res.render('profile', { singleUser });
+    res.render('profile', {
+      singleUser,
+      signedIn: req.session.loggedIn,
+      loggedOut: !req.session.loggedIn,
+    });
   } catch (error) {
     res.status(500).json({ msg: error });
   }

@@ -5,27 +5,12 @@ const { urlCompiler } = require('../../utils/helpers');
 
 router.post('/upload', async (req, res) => {
   try {
-    console.log(req.body);
     const fileStr = req.body.data;
     const uploadResponse = await cloudinary.uploader.upload(fileStr);
-    console.log(uploadResponse);
     uploadResponse.url = urlCompiler(uploadResponse.url, 'w_1169,h_780,c_fill');
 
-    console.log(
-      {
-        post_title: 'cloudinary upload',
-        post_image: uploadResponse.url,
-        post_video: 'cloudinary',
-        post_likes: '0',
-        user_id: req.session.user.id,
-      },
-      'test'
-    );
     const newPost = await Post.create({
-      post_title: 'cloudinary upload',
       post_image: uploadResponse.url,
-      post_video: 'cloudinary',
-      post_likes: '0',
       user_id: req.session.user.id,
     });
     res.json({ newPost, success: true });

@@ -19,6 +19,7 @@ router.get('/:id', async (req, res) => {
     const postArr = getPostsByTag.posts.map((singlePost) => {
       const thisPost = singlePost.dataValues;
       const userName = singlePost.user.dataValues.username;
+      const userImage = singlePost.user.dataValues.image;
 
       const otherTags = singlePost.tags.map((singleTag) => {
         return {
@@ -27,10 +28,8 @@ router.get('/:id', async (req, res) => {
         };
       });
 
-      return { thisPost, userName, otherTags };
+      return { thisPost, userName, userImage, otherTags };
     });
-
-    console.log(postArr);
 
     res.render(pageToRender, {
       tagName,

@@ -1,4 +1,9 @@
 const profileBtn = document.querySelector('.btn-profile');
+const addPostBtn = document.querySelector('#uploadPostBtn');
+
+document.addEventListener('DOMContentLoaded', function () {
+  addPostBtn.classList.add('is-hidden');
+});
 
 function readFile() {
   if (this.files && this.files[0]) {
@@ -15,7 +20,11 @@ function readFile() {
 const handleSubmitFile = (e) => {
   e.preventDefault();
   document.querySelector('.btn-profile').classList.add('is-loading');
-  if (!document.querySelector('input[type=file]')['files'][0]) return;
+  if (!document.querySelector('input[type=file]')['files'][0]) {
+    document.querySelector('.btn-profile').classList.remove('is-loading');
+    window.alert('Please choose a image');
+    return;
+  }
   const reader = new FileReader();
   reader.readAsDataURL(document.querySelector('input[type=file]')['files'][0]);
   reader.onloadend = async () => {

@@ -6,8 +6,7 @@ const Tag = require('./Tag');
 const TagToPost = require('./TagToPost');
 const Follower = require('./Follower');
 
-//2. Tag
-// Post:Tag = N:M
+// Post:Tag
 Post.belongsToMany(Tag, {
   foreignKey: 'post_id',
   through: TagToPost,
@@ -16,8 +15,6 @@ Tag.belongsToMany(Post, {
   foreignKey: 'tag_id',
   through: TagToPost,
 });
-
-// <<< hy
 
 // Posts
 
@@ -65,12 +62,6 @@ User.hasMany(Comment, {
   foreignKey: 'user_id',
 });
 
-// Followers
-
-// Follower.belongsTo(User, {
-//   foreignKey: 'user_id',
-// });
-
 Follower.belongsTo(User, {
   foreignKey: 'follower_id',
 });
@@ -78,13 +69,5 @@ Follower.belongsTo(User, {
 User.hasMany(Follower, {
   foreignKey: 'follower_id',
 });
-
-// User.hasMany(Follower, {
-//   foreignKey: 'id',
-// });
-
-// User.hasMany(Follower, {
-//   foreignKey: 'follower_id',
-// });
 
 module.exports = { User, Post, Like, Comment, Tag, TagToPost, Follower };

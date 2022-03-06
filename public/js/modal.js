@@ -6,16 +6,12 @@ const deletePost = document.querySelector('.delete-post');
 
 // This adds an event listener on h3 headers to fetch repo data
 
-console.log(actionsModal);
-console.log(modalTrigger);
-
 modalTrigger.addEventListener('click', async function () {
   try {
     const userId = modalTrigger.getAttribute('user-id');
     const postId =
       modalTrigger.parentElement.parentElement.parentElement.parentElement.id;
     const getUser = await getRequest(`/api/users/user`);
-    console.log(userId, postId, getUser, 'modal data');
     if (+userId === +getUser.user) {
       deletePost.classList.remove('is-hidden');
     }
@@ -23,7 +19,6 @@ modalTrigger.addEventListener('click', async function () {
       event.preventDefault();
       try {
         const postData = await makeRequest(`/api/posts/${postId}`, 'DELETE');
-        console.log(postData);
         window.location.replace('/');
       } catch (error) {
         console.log('Failed to login', error);

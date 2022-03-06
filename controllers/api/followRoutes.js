@@ -3,16 +3,12 @@ const { Follower } = require('../../models');
 
 router.post('/:followerId', async (req, res) => {
   try {
-    console.log(req.session);
     const { followerId } = req.params;
-    // console.log(followerId, 'followerId');
     const userId = req.session.user.id;
-    // console.log(userId, 'userId');
     const result = await Follower.findOne({
       where: { user_id: userId, follower_id: followerId },
     });
 
-    console.log(result);
     if (!result) {
       await Follower.create({ user_id: userId, follower_id: followerId });
       res.status(200).json({
@@ -33,14 +29,12 @@ router.post('/:followerId', async (req, res) => {
 
 router.get('/:followerId', async (req, res) => {
   try {
-    console.log(req.session);
     const { followerId } = req.params;
     const userId = req.session.user.id;
     const result = await Follower.findOne({
       where: { user_id: userId, follower_id: followerId },
     });
 
-    console.log(result);
     if (result) {
       res.status(200).json({
         follow: true,
