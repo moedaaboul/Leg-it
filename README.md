@@ -55,7 +55,7 @@
 ## About The Project
 
 [![Login Screen Shot][login-screenshot]](https://legogram.herokuapp.com/login)
-[![Home Screen Shot][home-screenshot]](https://legogram.herokuapp.com/)
+[![Feed Screen Shot][feed-screenshot]](https://legogram.herokuapp.com/)
 
 Through a combination of an exceptional concept with great technological
 delivery through industry standard tools, the logogram app was created to meet
@@ -224,4 +224,4 @@ Project Link:
 [linkedin-url-iw]: https://linkedin.com/in/iler-watson-643442158/
 [linkedin-url-man]: https://linkedin.com/in/mbongeni-allan-ngwenya-220375170/
 [login-screenshot]: /__admin__/resources/login.png
-[home-screenshot]: /__admin__/resources/showcase.png
+[feed-screenshot]: /__admin__/resources/feed.png
