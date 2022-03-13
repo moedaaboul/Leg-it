@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/heranYang93/Leg-it">
+  <a href="https://github.com/moedaaboul/legogram">
     <img src="__admin__/resources/logo.png" alt="Logo">
   </a>
 
@@ -17,14 +17,14 @@
   <p align="center">
     The concept for this project was to provide lego creators with a social media platform similar to Instagram where they could share their love for everything to do with Lego.
     <br />
-    <a href="https://github.com/heranYang93/Leg-it"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/moedaaboul/legogram"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://legogram.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/heranYang93/Leg-it/issues">Report Bug</a>
+    <a href="https://github.com/moedaaboul/legogram/issues">Report Bug</a>
     ·
-    <a href="https://github.com/heranYang93/Leg-it/issues">Request Feature</a>
+    <a href="https://github.com/moedaaboul/legogram/issues">Request Feature</a>
   </p>
 </div>
 
@@ -101,7 +101,7 @@ the sense of community on the app.
 0. Run deployed app at: https://legogram.herokuapp.com/
 1. Clone the repo
    ```sh
-   git clone git@github.com:heranYang93/Leg-it.git
+   git clone git@github.com:moedaaboul/legogram.git
    ```
 2. Install NPM packages
    ```sh
@@ -184,7 +184,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- > ![GitHub followers](https://img.shields.io/github/followers/heranYang93?style=social) -->
 
 Project Link:
-[github.com/heranYang93/Leg-ite](https://github.com/heranYang93/Leg-it)
+[github.com/moedaaboul/legogram](https://github.com/moedaaboul/legogram)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -204,15 +204,9 @@ Project Link:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[contributors-shield]:
-  https://img.shields.io/github/contributors/heranYang93/Leg-it.svg?style=for-the-badge
-[contributors-url]: https://github.com/heranYang93/Leg-it/graphs/contributors
 [forks-shield]:
   https://img.shields.io/github/forks/heranYang93/Leg-it.svg?style=for-the-badge
 [forks-url]: https://github.com/heranYang93/Leg-it/network/members
-[stars-shield]:
-  https://img.shields.io/github/stars/heranYang93/Leg-it.svg?style=for-the-badge
-[stars-url]: https://github.com/heranYang93/Leg-it/stargazers
 [issues-shield]:
   https://img.shields.io/github/issues/heranYang93/Leg-it.svg?style=for-the-badge
 [issues-url]: https://github.com/heranYang93/Leg-it/issues
