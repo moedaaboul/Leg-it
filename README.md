@@ -56,6 +56,7 @@
 
 [![Login Screen Shot][login-screenshot]](https://legogram.herokuapp.com/login)
 [![Feed Screen Shot][feed-screenshot]](https://legogram.herokuapp.com/)
+[![Post Screen Shot][post-screenshot]](https://legogram.herokuapp.com/)
 
 Through a combination of an exceptional concept with great technological
 delivery through industry standard tools, the logogram app was created to meet
@@ -225,3 +226,4 @@ Project Link:
 [linkedin-url-man]: https://linkedin.com/in/mbongeni-allan-ngwenya-220375170/
 [login-screenshot]: /__admin__/resources/login.png
 [feed-screenshot]: /__admin__/resources/feed.png
+[post-screenshot]: /__admin__/resources/post.png
