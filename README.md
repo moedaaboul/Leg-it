@@ -222,5 +222,5 @@ Project Link:
 [linkedin-url-eh]: https://linkedin.com/in/eoin-harkin-229115216/
 [linkedin-url-iw]: https://linkedin.com/in/iler-watson-643442158/
 [linkedin-url-man]: https://linkedin.com/in/mbongeni-allan-ngwenya-220375170/
-[login-screenshot]: /__admin__/resources/login.png
-[homepage-screenshot]: /__admin__/resources/showcase.png
+[product-screenshot]: /__admin__/resources/login.png
+[product-screenshot]: /__admin__/resources/showcase.png
